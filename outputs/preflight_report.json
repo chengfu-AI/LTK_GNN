@@ -1,0 +1,100 @@
+{
+  "study_period_utc": [
+    "2021-01-01T00:00:00Z",
+    "2022-10-31T23:00:00Z"
+  ],
+  "inputs": {
+    "station_file": {
+      "path": "D:\\paper2_数据下载\\data\\core_station_selection\\core_20_stations.csv",
+      "exists": true
+    },
+    "node_terrain_file": {
+      "path": "D:\\paper2_数据下载\\data\\terrain_features\\node_terrain_features.csv",
+      "exists": true
+    },
+    "edge_terrain_file": {
+      "path": "D:\\paper2_数据下载\\data\\terrain_features\\edge_terrain_features.csv",
+      "exists": true
+    }
+  },
+  "weather": {
+    "blh": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\blh",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "d2m": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\d2m",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "sp": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\sp",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "t2m": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\t2m",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "tp": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\tp",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "u10": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\u10",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "v10": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\v10",
+      "exists": true,
+      "hourly_files_2021_2022": 16056
+    },
+    "u_850": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\u_850",
+      "exists": true,
+      "hourly_files_2021_2022": 15672
+    },
+    "v_850": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\v_850",
+      "exists": true,
+      "hourly_files_2021_2022": 15672
+    },
+    "u_925": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\u_925",
+      "exists": true,
+      "hourly_files_2021_2022": 15672
+    },
+    "v_925": {
+      "path": "D:\\paper2_数据下载\\data\\era5_by_variable\\v_925",
+      "exists": true,
+      "hourly_files_2021_2022": 15672
+    }
+  },
+  "labels": {
+    "100": {
+      "file": "D:\\paper2_数据下载\\data\\hysplit_footprints\\graph_labels\\dynamic_edges_00100m.csv.gz",
+      "distinct_2021_2022_times": 5344,
+      "bad_rows": 0
+    },
+    "500": {
+      "file": "D:\\paper2_数据下载\\data\\hysplit_footprints\\graph_labels\\dynamic_edges_00500m.csv.gz",
+      "distinct_2021_2022_times": 5344,
+      "bad_rows": 0
+    },
+    "1000": {
+      "file": "D:\\paper2_数据下载\\data\\hysplit_footprints\\graph_labels\\dynamic_edges_01000m.csv.gz",
+      "distinct_2021_2022_times": 5344,
+      "bad_rows": 0
+    }
+  },
+  "pm10_root": "D:\\paper2_数据下载\\data\\PM10",
+  "status": "ready",
+  "notes": [
+    "This audit never accepts 2023–2024 timestamps as valid study samples.",
+    "A label time can only become a graph sample when all weather fields and all 20 PM10 values are available."
+  ]
+}

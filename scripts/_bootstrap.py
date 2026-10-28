@@ -1,0 +1,16 @@
+"""Make scripts runnable from a source checkout without installing the package."""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+SOURCE_ROOT = PROJECT_ROOT / "src"
+if str(SOURCE_ROOT) not in sys.path:
+    sys.path.insert(0, str(SOURCE_ROOT))
+
+
+def default_config() -> Path:
+    return PROJECT_ROOT / "config" / "study_2021_2022.json"

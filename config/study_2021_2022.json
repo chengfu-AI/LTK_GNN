@@ -1,0 +1,35 @@
+{
+  "study_name": "ltkg_2021_2022",
+  "data_root": "AUTO",
+  "pm10_root": "D:\\paper2_数据下载\\data\\PM10",
+  "output_root": "outputs",
+  "executables": {
+    "ecm2arl": "C:/hysplit/exec/ecm2arl.exe",
+    "hycs": "C:/hysplit/exec/hycs_std.exe",
+    "con2asc": "C:/hysplit/exec/con2asc.exe"
+  },
+  "execution": {
+    "hysplit_workers": 24
+  },
+  "period": {
+    "start_utc": "2021-01-01T00:00:00Z",
+    "end_utc": "2022-10-31T23:00:00Z"
+  },
+  "splits": {
+    "train_end_utc": "2021-12-31T23:00:00Z",
+    "valid_end_utc": "2022-06-30T23:00:00Z"
+  },
+  "sampling_interval_hours": 3,
+  "pm10_utc_offset_hours": 8,
+  "lag_hours": 24,
+  "release_heights_agl_m": [100, 500, 1000],
+  "weather_variables": ["blh", "d2m", "sp", "t2m", "tp", "u10", "v10", "u_850", "v_850", "u_925", "v_925"],
+  "teacher_variants": {
+    "wind10": {"weather": ["u10", "v10"], "use_terrain_barrier": true},
+    "wind10_925": {"weather": ["u10", "v10", "u_925", "v_925"], "use_terrain_barrier": true},
+    "wind10_925_850": {"weather": ["u10", "v10", "u_925", "v_925", "u_850", "v_850"], "use_terrain_barrier": true},
+    "wind_pblh": {"weather": ["blh", "u10", "v10", "u_925", "v_925", "u_850", "v_850"], "use_terrain_barrier": true},
+    "no_terrain_barrier": {"weather": ["blh", "d2m", "sp", "t2m", "tp", "u10", "v10", "u_850", "v_850", "u_925", "v_925"], "use_terrain_barrier": false},
+    "full": {"weather": ["blh", "d2m", "sp", "t2m", "tp", "u10", "v10", "u_850", "v_850", "u_925", "v_925"], "use_terrain_barrier": true}
+  }
+}
